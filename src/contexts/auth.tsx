@@ -55,4 +55,8 @@ export const AuthProvider: React.FC = ({children}) => {
   );
 };
 
-export default AuthContext;
+export function useAuth() {
+  const context = React.useContext(AuthContext);
+
+  return context;
+}
